@@ -9,7 +9,12 @@ export default function* tryUsersList() {
         const data = yield call([response, 'json'])
 
         yield put({ type: userActions.LIST_SUCCESS, data })
+        yield put({ type: 'myTest', some: 'test' })
     } catch (e) {
         yield put({ type: userActions.LIST_FAILED })
     }
+}
+
+export function* someTest() {
+    yield put({ type: 'newTest', some: 'root' })
 }

@@ -11,6 +11,7 @@ import './index.css';
 import Users from './components/Users';
 import Counter from './components/Counter';
 import Home from './components/Home';
+import UsersRedux from './components/UsersRedux';
 
 const { store } = getStore();
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Switch>
         <RouteApp path={'/users'} component={Users} />
         <RouteApp path={'/counter'} component={Counter} />
+        <RouteApp path={'/users-redux'} component={UsersRedux} />
         <RouteApp path={'/'} component={Home} />
       </Switch>
     </BrowserRouter>

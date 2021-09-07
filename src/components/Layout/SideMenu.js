@@ -5,6 +5,7 @@ import {
   HomeOutlined,
   DashboardOutlined,
   TeamOutlined,
+  UsergroupAddOutlined
 } from '@ant-design/icons';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -33,6 +34,12 @@ const App = () => {
           <TeamOutlined />
           <span>Users</span>
           <Link to="/users"></Link>
+        </Menu.Item>
+
+        <Menu.Item key="/users-redux">
+          <UsergroupAddOutlined />
+          <span>Users Redux</span>
+          <Link to="/users-redux"></Link>
         </Menu.Item>
 
         <Menu.Item key="/counter">

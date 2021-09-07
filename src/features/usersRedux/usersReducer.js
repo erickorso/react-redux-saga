@@ -1,11 +1,4 @@
-import {createStructuredSelector} from 'reselect';
-
-export const NAME = 'users';
-
-// Action Types
-const LIST_TRY = '[users]/LIST_TRY';
-const LIST_SUCCESS = '[users]/LIST_SUCCESS';
-const LIST_FAILED = '[users]/LIST_FAILED';
+import actionTypes from './actionTypes'
 
 // Initial State:
 const initialState = {
@@ -25,24 +18,4 @@ export default function reducer(state = initialState, action = {}) {
         default:
             return state
     }
-}
-
-function list() {
-    return {type: LIST_TRY}
-}
-
-const users = (state) => state[NAME];
-
-export const selector = createStructuredSelector({
-    users,
-})
-
-export const actionCreators = {
-    list
-}
-
-export const actionTypes = {
-    LIST_TRY,
-    LIST_FAILED,
-    LIST_SUCCESS,
 }
